@@ -40,7 +40,7 @@ const CreateProduct = () => {
 		console.log(value);
 		const { title, description, category } = value;
 
-		const localURL = "http://localhost:3554";
+		const localURL = "https://mr-gent-backend.herokuapp.com";
 
 		const url = `${localURL}/api/user/${user._id}/upload`;
 

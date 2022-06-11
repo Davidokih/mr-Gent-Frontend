@@ -29,7 +29,7 @@ const SignIn = () => {
     const onSubmit = handleSubmit(async (value) => {
         console.log(value);
         const { email, password } = value;
-        const mainUrl = "http://localhost:3554";
+        const mainUrl = "https://mr-gent-backend.herokuapp.com";
         const url = `${mainUrl}/api/user/signin`;
 
         await axios.post(url, { email, password }).then((res) => {

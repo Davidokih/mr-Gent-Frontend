@@ -62,11 +62,16 @@ const Card1 = styled.div`
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color: white;
-    height: 536px;
+    height: 576px;
+    background-image: url('/images/IMG-20220512-WA0012.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     p{
         text-align: center;
         width: 350px;
+        font-weight: 800;
     }
 
     @media (max-width: 800px) {
