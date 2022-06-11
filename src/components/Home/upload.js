@@ -17,7 +17,7 @@ const CreateProduct = () => {
 	const formSchema = yup.object().shape({
 		title: yup.string().required("This field cannot be empty"),
 		description: yup.string().required("This field cannot be empty"),
-		category: yup.number().required("This field cannot be empty"),
+		category: yup.string().required("This field cannot be empty"),
 	});
 
 	const {
