@@ -30,7 +30,7 @@ const Body = () => {
                             {/* <img src='/images/IMG-20220512-WA0015.jpg' /> */ }
                         </ImageHold>
                         <TextDiv>
-                            <Title>TRaditional Arttias</Title>
+                            <Title>TRaditional Clothing</Title>
                             <Content>There are series of custom wears that bring Out the native looks in you.</Content>
                             <p onClick={ change }>See More...</p>
                         </TextDiv>
