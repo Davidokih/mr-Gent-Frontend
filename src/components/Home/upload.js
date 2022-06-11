@@ -265,6 +265,8 @@ const Wrapper = styled.div`
 	justify-content: center;
 	display: flex;
 	align-items: center;
+	margin-top: 70px;
+
 `;
 
 const Container = styled.div`
