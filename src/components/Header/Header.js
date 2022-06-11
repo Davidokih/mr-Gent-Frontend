@@ -27,7 +27,7 @@ const Header = () => {
                         <Link to="/" style={ { textDecoration: "none", color: "#cdcdcd" } }><span>Home</span></Link>
                         <Link to='/collecttion' style={ { textDecoration: "none" } }><span>Collection</span></Link>
                         <Link to='/about' style={ { textDecoration: "none", color: "#cdcdcd" } }><span>About Us</span></Link>
-                        <span>Contact Us</span>
+                        {/* <span>Contact Us</span> */ }
                         { user ? <Link to="/upload" style={ { textDecoration: "none" } }><span>Upload</span></Link> : null }
                         <Link to='/signUp' style={ { textDecoration: "none", color: "#cdcdcd" } }><button onClick={ () => {
                             dispatch(signOut());
@@ -52,12 +52,32 @@ const Header = () => {
                 </ImageHold> : null }</div>
             </Container>
 
-            <Slide id='Slide'>
+            <Slide id='Slide' onClick={ () => {
+                document.getElementById('Slide').style.top = '700px';
+                document.getElementById('bars').style.display = 'block';
+                document.getElementById('cancle').style.display = 'none';
+            } }>
                 <Logo>MrGents</Logo>
-                <Link to="/" style={ { textDecoration: "none", color: "#fff" } }><Nav>Home</Nav></Link>
-                <Link to="/collecttion" style={ { textDecoration: "none", color: "#fff" } }><Nav>Collection</Nav></Link>
-                <Link to="/about" style={ { textDecoration: "none", color: "#fff" } }><Nav>About</Nav></Link>
-                <Nav>Contact</Nav>
+                <Link to="/" style={ { textDecoration: "none", color: "#fff" } }><Nav onClick={ () => {
+                    document.getElementById('Slide').style.top = '700px';
+                    document.getElementById('bars').style.display = 'block';
+                    document.getElementById('cancle').style.display = 'none';
+                } }>Home</Nav></Link>
+                <Link to="/collecttion" style={ { textDecoration: "none", color: "#fff" } }><Nav onClick={ () => {
+                    document.getElementById('Slide').style.top = '700px';
+                    document.getElementById('bars').style.display = 'block';
+                    document.getElementById('cancle').style.display = 'none';
+                } }>Collection</Nav></Link>
+                <Link to="/about" style={ { textDecoration: "none", color: "#fff" } }><Nav onClick={ () => {
+                    document.getElementById('Slide').style.top = '700px';
+                    document.getElementById('bars').style.display = 'block';
+                    document.getElementById('cancle').style.display = 'none';
+                } }>About</Nav></Link>
+                {/* <Nav onClick={ () => {
+                    document.getElementById('Slide').style.top = '700px';
+                    document.getElementById('bars').style.display = 'block';
+                    document.getElementById('cancle').style.display = 'none';
+                } }>Contact</Nav> */}
                 { user ? <Link to="/upload"><Nav>Upload</Nav></Link> : null }
                 <Link to='/signUp' style={ { textDecoration: "none", color: "#fff" } }><Nav>Log In</Nav></Link>
             </Slide>
@@ -173,7 +193,8 @@ const Container = styled.div`
     justify-content: center;
     background-color: black;
     color: #cbad93;
-    z-index: 1;
+    /* z-index: 1; */
+    position: fixed;
 
     /* position: sticky; */
 
