@@ -79,6 +79,7 @@ font-family: Bodoni MT;
     /* background-color: red; */
     justify-content: center;
     flex-direction: column;
+    overflow: hidden;
     // z-index: 0;
 
     color: #fff;
@@ -96,7 +97,7 @@ const Wrapper = styled.div`
     }
 `;
 const Holder = styled.div`
-    width: 80%;
+    width: 100%;
     display: flex;
     border-radius: 5px;
     align-items: center;
@@ -112,6 +113,9 @@ const Holder = styled.div`
     } */
     @media (max-width: 1100px){
         width: 75%;
+    }
+    @media (max-width: 500px){
+        width: 100%;
     }
 `;
 const ImageHold = styled.div`
@@ -144,6 +148,8 @@ const TextDiv = styled.div`
 const Title = styled.div`
     font-size: 30px;
     font-weight: 700;
+
+    text-align: center;
 `;
 const Content = styled.div`
     font-size: 15px;

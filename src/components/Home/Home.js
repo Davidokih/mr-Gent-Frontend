@@ -24,6 +24,10 @@ export default Home;
 const Container = styled.div`
     background-color: rgba(0,0,0,0.95);
     width: 100%;
+
+    @media (max-width: 400px){
+        width: 120%;
+    }
 `;
 const Wrapper = styled.div`
 
