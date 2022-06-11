@@ -17,7 +17,7 @@ const Collection = () => {
                 <h1>Traditional Clothing</h1>
                 { product?.map((props) => {
                     return (
-                        <General>
+                        <General key={ props._id }>
                             <Holder>
                                 <ImageHold>
                                     <img src={ props.avatar } />

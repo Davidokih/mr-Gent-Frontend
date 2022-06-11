@@ -53,6 +53,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 60px;
 `;
 const Card1 = styled.div`
     width: 400px;
