@@ -26,7 +26,8 @@ const Body = () => {
                     <Holder>
                         <ImageHold>
                             <img src='/images/IMG-20220512-WA0019.jpg' />
-                            <img src='/images/IMG-20220512-WA0018.jpg' />
+                            <img src='/images/IMG-20220512-WA0015.jpg' />
+                            {/* <img src='/images/IMG-20220512-WA0015.jpg' /> */ }
                         </ImageHold>
                         <TextDiv>
                             <Title>TRaditional Arttias</Title>
@@ -102,6 +103,7 @@ const Holder = styled.div`
     justify-content: center;
     margin-top: 20px;
         flex-direction: column;
+        /* flex-wrap: wrap; */
 
     background-color: black;
 
