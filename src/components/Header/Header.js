@@ -193,7 +193,7 @@ const Container = styled.div`
     justify-content: center;
     background-color: black;
     color: #cbad93;
-    /* z-index: 1; */
+    z-index: 1;
     position: fixed;
 
     /* position: sticky; */
