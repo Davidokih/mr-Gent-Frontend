@@ -25,8 +25,11 @@ const Container = styled.div`
     background-color: rgba(0,0,0,0.95);
     width: 100%;
 
-    @media (max-width: 400px){
+    @media (max-width: 470px){
         width: 120%;
+    }
+    @media (max-width: 278px){
+        width: 140%;
     }
 `;
 const Wrapper = styled.div`
