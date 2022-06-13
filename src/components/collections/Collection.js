@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -7,20 +7,50 @@ const Collection = () => {
     // const dispatch = useDispatch();
     const product = useSelector((state) => state.persistedReducer.product);
     // const user = useSelector((state) => state.persistedReducer.user);
+    const sliderChange = [
+        {
+            id: 1,
+            image: require('../images/IMG-20220512-WA0004.jpg')
+        },
+        {
+            id: 2,
+            image: require('../images/IMG-20220512-WA0005.jpg')
+        },
+        {
+            id: 3,
+            image: require('../images/IMG-20220512-WA0006.jpg')
+        },
+        {
+            id: 4,
+            image: require('../images/IMG-20220512-WA0007.jpg')
+        },
+        {
+            id: 5,
+            image: require('../images/IMG-20220512-WA0008.jpg')
+        },
+    ];
+    const [ count, setCount ] = useState(0);
+
+    useEffect(() => {
+        setInterval(() => {
+            setCount((el) => el + 1);
+        }, 3000);
+    }, []);
+    console.log(count);
 
     return (
         <Container>
             <Hero>
-                <Image src="/images/IMG-20220512-WA0017.jpg" />
+                <Image src={ sliderChange[ count % sliderChange.length ].image } />
             </Hero>
             <Wrapper>
-                <h1>Traditional Clothing</h1>
+                <h1>All Categoryes</h1>
                 { product?.map((props) => {
                     return (
                         <General key={ props._id }>
                             <Holder>
                                 <ImageHold>
-                                    <img src={ props.avatar } />
+                                    {/* <img src={ props.avatar } /> */ }
                                 </ImageHold>
                                 <Hold>
                                     <Title>{ props.title }</Title>
@@ -72,24 +102,28 @@ const Wrapper = styled.div`
 
     h1{
         color: #fff;
+
+        /* @media (max-width: 300px) */
     }
 `;
 
 const General = styled.div`
-width: 70%;
+width: 80%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* background-color: red; */
+
 
     @media (max-width:800px){
-        width: 90%;
+        width: 100%;
         flex-direction: column;
     }
 `;
 const Holder = styled.div`
     width: 280px;
     height: 430px;
-    /* background-color: red; */
 
     display: flex;
     align-items: center;
@@ -98,6 +132,10 @@ const Holder = styled.div`
     flex-wrap: wrap;
 
     margin: 10px;
+
+    @media (max-width: 300px){
+        width: 250px;
+    }
 `;
 const ImageHold = styled.div`
     width: 100%;

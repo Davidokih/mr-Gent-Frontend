@@ -7,15 +7,11 @@ import Hero from './Hero';
 
 const Home = () => {
     return (
-        <>
-            <Container>
-                <Hero />
-                {/* <Back /> */ }
-                <Body />
-            </Container>
+        <Container>
+            <Hero />
+            <Body />
+        </Container>
 
-            {/* <Contents /> */ }
-        </>
     );
 };
 
@@ -23,17 +19,16 @@ export default Home;
 
 const Container = styled.div`
     background-color: rgba(0,0,0,0.95);
-    width: 100%;
-
-    @media (max-width: 470px){
+    /* width: 100%; */
+    /* position: relative; */
+    /* @media (max-width: 470px){
         width: 120%;
-    }
-    @media (max-width: 278px){
-        width: 140%;
-    }
+    } */
+    /* @media (max-width: 328px){
+        width: 130%;
+    } */
 `;
 const Wrapper = styled.div`
-
     width: 80%;
     height: 400px;
     display: flex;
@@ -56,3 +51,4 @@ const Wrapper = styled.div`
         text-align: center;
     }
 `;
+

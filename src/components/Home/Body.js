@@ -106,7 +106,11 @@ const Holder = styled.div`
         flex-direction: column;
         /* flex-wrap: wrap; */
 
-    background-color: black;
+        @media (max-width: 500px){
+            width: 80%;
+        }
+
+    /* background-color: black; */
 
     /* ::before{
         content: "hello";

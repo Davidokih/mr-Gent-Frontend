@@ -33,10 +33,21 @@ const Displays = () => {
 
 export default Displays;
 
-const Title = styled.div``;
-const Content = styled.div``;
+const Title = styled.div`
+    z-index: 1;
+`;
+const Content = styled.div`
+    z-index: 1;
+`;
 const TextHold = styled.div`
     text-align: center;
+
+            /* transform: scaleY(0); */
+    transform-origin: bottom;
+    position: relative;
+
+    
+
 `;
 const Container = styled.div`
     width: 100%;
@@ -71,7 +82,29 @@ const Hold = styled.div`
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            /* transform: scaleY(1); */
+            transition: all 5s;
+
+            ::before{
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
             background-color: rgba(0,0,0,0.8);
+
+        transform: scaleY(0);
+        z-index: 0;
+        transform-origin: bottom;
+        transition: all .7s ease;
+
+        ${Title}{
+            transition: all 2s;
+        }
+    }
+
+    :hover::before{
+        transform: scaleY(1);
+    }
         }
     }
 `;

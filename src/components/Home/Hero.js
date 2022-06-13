@@ -14,7 +14,7 @@ const Hero = () => {
 export default Hero;
 
 const Container = styled.div`
-    /* width: 100%; */
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,11 +22,11 @@ const Container = styled.div`
 
     @media (max-width: 450px){
         /* width: 100vw; */
-        flex: 1;
+        /* flex: 1; */
     }
 `;
 const Image = styled.img`
-
+   
     @media (max-width: 450px){
         width: 100%;
     }

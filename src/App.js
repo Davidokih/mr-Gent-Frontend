@@ -8,6 +8,7 @@ import About from "./components/collections/About";
 import SignUp from "./components/HolderInUp/InUp";
 import Confirm from "./components/Confirm";
 import Upload from "./components/Home/upload";
+import Slider from './components/collections/Slider';
 
 const App = () => {
 	return (
@@ -16,6 +17,7 @@ const App = () => {
 				<Header />
 				<Routes>
 					<Route path='/' element={ <Home /> } />
+					<Route path='/slide' element={ <Slider /> } />
 					<Route path='/collecttion' element={ <Collection /> } />
 					<Route path='/confirm' element={ <Confirm /> } />
 					<Route path='/upload' element={ <Upload /> } />

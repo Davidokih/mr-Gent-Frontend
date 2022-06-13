@@ -19,7 +19,7 @@ const About = () => {
                     We at Mr Gents we make our customer fill the good sensation of good cloths, for men.
                     We do both Traditional and English wears and also for business personal that fill left out wear make suite and other attires that will not be mensioned but you will see when you start exploring our platform,
                     You will be marvel by the greate designs of clothing you will see,
-                    and for more check the footer for both our phone
+                    and for more check the footer for both our phone.
                 </AboutUser>
             </Wrapper>
         </Container>
@@ -29,7 +29,6 @@ const About = () => {
 export default About;
 
 const Container = styled.div`
-margin-top: 40px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -42,6 +41,7 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+margin-top: 90px;
 
    
     p{

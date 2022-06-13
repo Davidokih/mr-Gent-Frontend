@@ -29,9 +29,9 @@ const Header = () => {
                         <Link to='/about' style={ { textDecoration: "none", color: "#cdcdcd" } }><span>About Us</span></Link>
                         {/* <span>Contact Us</span> */ }
                         { user ? <Link to="/upload" style={ { textDecoration: "none" } }><span>Upload</span></Link> : null }
-                        <Link to='/signUp' style={ { textDecoration: "none", color: "#cdcdcd" } }><button onClick={ () => {
+                        { user ? (<Link to='/signUp' style={ { textDecoration: "none", color: "#cdcdcd" } }><button onClick={ () => {
                             dispatch(signOut());
-                        } }>Log In</button></Link>
+                        } }>Log Out</button></Link>) : (<Link to='/signUp' style={ { textDecoration: "none", color: "#cdcdcd" } }><button>Log In</button></Link>) }
 
                     </Holder>
 
@@ -41,7 +41,7 @@ const Header = () => {
                             document.getElementById('bars').style.display = 'none';
                             document.getElementById('cancle').style.display = 'block';
                         } } /> <GiCancel id='cancle' size="40px" onClick={ () => {
-                            document.getElementById('Slide').style.top = '700px';
+                            document.getElementById('Slide').style.top = '2000px';
                             document.getElementById('bars').style.display = 'block';
                             document.getElementById('cancle').style.display = 'none';
                         } } style={ { display: "none" } } />
@@ -53,28 +53,28 @@ const Header = () => {
             </Container>
 
             <Slide id='Slide' onClick={ () => {
-                document.getElementById('Slide').style.top = '700px';
+                document.getElementById('Slide').style.top = '2-00px';
                 document.getElementById('bars').style.display = 'block';
                 document.getElementById('cancle').style.display = 'none';
             } }>
                 <Logo>MrGents</Logo>
                 <Link to="/" style={ { textDecoration: "none", color: "#fff" } }><Nav onClick={ () => {
-                    document.getElementById('Slide').style.top = '700px';
+                    document.getElementById('Slide').style.top = '2000px';
                     document.getElementById('bars').style.display = 'block';
                     document.getElementById('cancle').style.display = 'none';
                 } }>Home</Nav></Link>
                 <Link to="/collecttion" style={ { textDecoration: "none", color: "#fff" } }><Nav onClick={ () => {
-                    document.getElementById('Slide').style.top = '700px';
+                    document.getElementById('Slide').style.top = '2000px';
                     document.getElementById('bars').style.display = 'block';
                     document.getElementById('cancle').style.display = 'none';
                 } }>Collection</Nav></Link>
                 <Link to="/about" style={ { textDecoration: "none", color: "#fff" } }><Nav onClick={ () => {
-                    document.getElementById('Slide').style.top = '700px';
+                    document.getElementById('Slide').style.top = '2000px';
                     document.getElementById('bars').style.display = 'block';
                     document.getElementById('cancle').style.display = 'none';
                 } }>About</Nav></Link>
                 {/* <Nav onClick={ () => {
-                    document.getElementById('Slide').style.top = '700px';
+                    document.getElementById('Slide').style.top = '1000px';
                     document.getElementById('bars').style.display = 'block';
                     document.getElementById('cancle').style.display = 'none';
                 } }>Contact</Nav> */}
@@ -175,7 +175,7 @@ const Slide = styled.div`
     color: #fff;
     position: fixed;
     left: 0px;
-    top: 700px;
+    top: 2000px;
     transition: all 2s;
     z-index: 1;
 
@@ -185,7 +185,7 @@ const Slide = styled.div`
     } */
 `;
 const Container = styled.div`
-/* position: fixed; */
+    position: fixed;
     width: 100%;
     height: 70px;
     display: flex;
@@ -194,28 +194,7 @@ const Container = styled.div`
     background-color: black;
     color: #cbad93;
     z-index: 1;
-    position: fixed;
-
-    /* position: sticky; */
-
-    /* ::before{
-        content: "hello";
-        position: absolute;
-        top: 0;
-        bottom: 10px;
-        z-index: -1;
-        background-color: red;
-        width: 100%;
-
-        transform: scale(0);
-        transform-origin: center;
-        transition: all .7s ease;
-    }
-
-    :hover::before{
-        transform: scale(1);
-        transform: scaleZ(1);
-    } */
+    
 `;
 const Wrapper = styled.div`
     width: 85%;
