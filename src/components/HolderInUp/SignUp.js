@@ -40,7 +40,7 @@ const SignUp = () => {
     const onSubmit = handleSubmit(async (value) => {
         console.log(value);
         const { userName, email, password, adminPass, admin } = value;
-        const mainUrl = "https://mr-gent-backend.herokuapp.com";
+        const mainUrl = "https://mr-gents-backend.herokuapp.com";
         const url = `${mainUrl}/api/user/register`;
 
         const config = {
